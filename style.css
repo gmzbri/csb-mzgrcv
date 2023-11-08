@@ -1,0 +1,85 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Superstudio Trial";
+  src: url("fonts/SuperstudioTrial-Bold.eot");
+  src: url("fonts/SuperstudioTrial-Bold.eot?#iefix") format("embedded-opentype"),
+    url("fonts/SuperstudioTrial-Bold.woff2") format("woff2"),
+    url("fonts/SuperstudioTrial-Bold.woff") format("woff"),
+    url("fonts/SuperstudioTrial-Bold.ttf") format("truetype"),
+    url("fonts/SuperstudioTrial-Bold.svg#SuperstudioTrial-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+#container {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transform-origin: center center;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.5s ease-out;
+}
+
+.box {
+  position: absolute;
+  font-family: "Superstudio Trial", monospace;
+  background: #ccc;
+}
+
+.box .label {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  padding: 3px 6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f2f732;
+}
+
+.box .label h2 {
+  padding-right: 20px;
+}
+
+.box .label h2,
+.box .label h3 {
+  font-size: 15px;
+}
+
+.thumb-small {
+  width: 344px;
+  height: 212px;
+}
+
+.thumb-normal {
+  width: 532px;
+  height: 328px;
+}
+
+.box video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) perspective(800px) rotateX(0deg)
+    rotateY(0deg);
+  transform-origin: center center;
+  transition: all 0.5s ease-out;
+  pointer-events: none;
+}
+
+.logo svg {
+  width: 55vw;
+}
