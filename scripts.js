@@ -31,7 +31,9 @@ $(document).ready(function () {
 
     $("#container").css(
       "transform",
-      `rotateX(${deltaY / -18}deg) rotateY(${deltaX / 18}deg)`
+      `translate(-50%, -50%) rotateX(${deltaY / -18}deg) rotateY(${
+        deltaX / 18
+      }deg)`
     );
 
     const logoRotationX = deltaY / 18; // Adjust sensitivity as needed
